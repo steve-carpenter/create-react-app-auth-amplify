@@ -1,3 +1,7 @@
+.App{
+  background-color: #F5F5F5
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 20vmin;
@@ -13,6 +17,11 @@
 }
 
 .title {
+  color: black;
+  text-align: center;
+}
+
+.tldr {
   color: black;
   text-align: center;
 }

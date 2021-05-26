@@ -55,7 +55,25 @@ setStateAsync(state) {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <ReactJson src={this.state.response} enableClipboard={false} displayDataTypes={false} />
+        <h4 className="tldr">TLDR; <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html"> After a successful authN, Cognito returns user pool tokens to your app</a></h4>
+        <ReactJson src={this.state.response} enableClipboard={false} displayDataTypes={false} theme={{
+                base00: "#F5F5F5",
+                base01: "#ddd",
+                base02: "#ddd",
+                base03: "#444",
+                base04: "white",
+                base05: "#444",
+                base06: "#444",
+                base07: "#444",
+                base08: "#444",
+                base09: "#FF9900",
+                base0A: "#FF9900",
+                base0B: "#FF9900",
+                base0C: "#FF9900",
+                base0D: "#FF9900",
+                base0E: "#FF9900",
+                base0F: "#FF9900"
+            }} />
       </div>
     );
   }

@@ -51,13 +51,11 @@ setStateAsync(state) {
   render() {
     return (
       <div className="App">
+        <h1 className ="title">Solo CUP (Cognito User Pool) Token Visualizer</h1>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.{this.state.user} {this.state.expiration} 
-          </p>
         </header>
-        <ReactJson src={this.state.response} />
+        <ReactJson src={this.state.response} enableClipboard={false} displayDataTypes={false} />
       </div>
     );
   }

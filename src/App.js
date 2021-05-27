@@ -58,7 +58,7 @@ setStateAsync(state) {
         </header>
         <h4 className="tldr">TLDR; <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html"> After a successful authN, Cognito returns user pool tokens to your app</a></h4>
         <ApiGWTest></ApiGWTest>
-        <ReactJson src={this.state.response} enableClipboard={false} displayDataTypes={false} theme={{
+        <ReactJson src={this.state.response} copy-without-quotes={true} quotesOnKeys={false} displayObjectSize={false} displayDataTypes={false} theme={{
                 base00: "#F5F5F5",
                 base01: "#ddd",
                 base02: "#ddd",
@@ -75,7 +75,13 @@ setStateAsync(state) {
                 base0D: "#FF9900",
                 base0E: "#FF9900",
                 base0F: "#FF9900"
-            }} />
+            }}
+            enableClipboard={e => {
+              if(e.src && typeof(e.src) == "string"){
+                navigator.clipboard.writeText(e.src.replace('"',''))
+              }
+              }}
+             />
       </div>
     );
   }

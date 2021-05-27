@@ -34,3 +34,17 @@
     transform: rotate(360deg);
   }
 }
+
+.tokenTextBox {
+  width: -moz-available;
+}
+
+.submitToken {
+  margin-top: 1%;
+}
+
+.response{
+  width: -moz-available;
+  padding: 5%;
+  text-align: center;
+}

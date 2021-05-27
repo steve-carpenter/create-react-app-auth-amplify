@@ -5,6 +5,7 @@ import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 import ReactJson from 'react-json-view';
+import ApiGWTest from './ApiGWTest'
 Amplify.configure(aws_exports);
 
 class App extends Component {
@@ -56,6 +57,7 @@ setStateAsync(state) {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <h4 className="tldr">TLDR; <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html"> After a successful authN, Cognito returns user pool tokens to your app</a></h4>
+        <ApiGWTest></ApiGWTest>
         <ReactJson src={this.state.response} enableClipboard={false} displayDataTypes={false} theme={{
                 base00: "#F5F5F5",
                 base01: "#ddd",
